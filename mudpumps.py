@@ -30,7 +30,7 @@ mud_pump_three_output_bbls_per_minute = mud_pump_three_output_bbls_per_stroke * 
 casing_id = 9.313
 drill_pipe_od = 5
 
-annular_capacity = (casing_id ** 2 / 1029.8) - (drill_pipe_od ** 2 / 1029.8)
+annular_capacity = (casing_id ** 2 - drill_pipe_od ** 2) / 1029.4
 
-annular_velocity = (mud_pump_one_output_bbls_per_minute + mud_pump_two_output_bbls_per_minute + mud_pump_three_output_bbls_per_minute) / annular_capacity
-return(annular_velocity)
+annular_velocity_ft_per_minute = (mud_pump_one_output_bbls_per_minute + mud_pump_two_output_bbls_per_minute + mud_pump_three_output_bbls_per_minute) / annular_capacity
+print(annular_velocity)
